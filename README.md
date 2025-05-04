@@ -1,4 +1,4 @@
-# eco-store-GPT<!DOCTYPE html>
+# eco-store<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
