@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
@@ -178,15 +178,112 @@
     </div>
   </div>
   <div class="products" id="productList">
-    <!-- Пример товара -->
+    <!-- Пример товаров -->
     <div class="product" data-category="fruits">
       <img src="https://via.placeholder.com/150?text=Яблоки" alt="Органические яблоки">
       <h3>Органические яблоки</h3>
       <p>500 руб / кг</p>
       <button onclick="addToCart('Органические яблоки')">В корзину</button>
     </div>
-    <!-- Добавьте остальные товары здесь, следуя той же структуре -->
-    <!-- ... -->
+
+    <div class="product" data-category="vegetables">
+      <img src="https://via.placeholder.com/150?text=Огурцы" alt="Огурцы">
+      <h3>Огурцы свежие</h3>
+      <p>200 руб / кг</p>
+      <button onclick="addToCart('Огурцы свежие')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="dairy">
+      <img src="https://via.placeholder.com/150?text=Молоко" alt="Молоко">
+      <h3>Молоко органическое</h3>
+      <p>80 руб / литр</p>
+      <button onclick="addToCart('Молоко органическое')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="beverages">
+      <img src="https://via.placeholder.com/150?text=Сок" alt="Органический сок">
+      <h3>Сок яблочный органический</h3>
+      <p>150 руб / литр</p>
+      <button onclick="addToCart('Сок яблочный органический')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="nuts">
+      <img src="https://via.placeholder.com/150?text=Орехи" alt="Орехи миндаль">
+      <h3>Миндаль органический</h3>
+      <p>600 руб / кг</p>
+      <button onclick="addToCart('Миндаль органический')">В корзину</button>
+    </div>
+
+    <!-- Новые товары -->
+    <div class="product" data-category="fruits">
+      <img src="https://via.placeholder.com/150?text=Бананы" alt="Органические бананы">
+      <h3>Органические бананы</h3>
+      <p>450 руб / кг</p>
+      <button onclick="addToCart('Органические бананы')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="vegetables">
+      <img src="https://via.placeholder.com/150?text=Помидоры" alt="Помидоры">
+      <h3>Помидоры свежие</h3>
+      <p>300 руб / кг</p>
+      <button onclick="addToCart('Помидоры свежие')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="dairy">
+      <img src="https://via.placeholder.com/150?text=Творог" alt="Творог органический">
+      <h3>Творог органический</h3>
+      <p>120 руб / 250 г</p>
+      <button onclick="addToCart('Творог органический')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="beverages">
+      <img src="https://via.placeholder.com/150?text=Чай" alt="Зеленый чай">
+      <h3>Зеленый чай органический</h3>
+      <p>100 руб / 50 г</p>
+      <button onclick="addToCart('Зеленый чай органический')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="nuts">
+      <img src="https://via.placeholder.com/150?text=Кешью" alt="Орехи кешью">
+      <h3>Орехи кешью органические</h3>
+      <p>800 руб / кг</p>
+      <button onclick="addToCart('Орехи кешью органические')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="fruits">
+      <img src="https://via.placeholder.com/150?text=Груши" alt="Органические груши">
+      <h3>Органические груши</h3>
+      <p>400 руб / кг</p>
+      <button onclick="addToCart('Органические груши')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="vegetables">
+      <img src="https://via.placeholder.com/150?text=Морковь" alt="Морковь">
+      <h3>Морковь свежая</h3>
+      <p>150 руб / кг</p>
+      <button onclick="addToCart('Морковь свежая')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="dairy">
+      <img src="https://via.placeholder.com/150?text=Кефир" alt="Кефир органический">
+      <h3>Кефир органический</h3>
+      <p>90 руб / литр</p>
+      <button onclick="addToCart('Кефир органический')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="beverages">
+      <img src="https://via.placeholder.com/150?text=Минералка" alt="Минеральная вода">
+      <h3>Минеральная вода</h3>
+      <p>50 руб / 500 мл</p>
+      <button onclick="addToCart('Минеральная вода')">В корзину</button>
+    </div>
+
+    <div class="product" data-category="nuts">
+      <img src="https://via.placeholder.com/150?text=Фисташки" alt="Фисташки">
+      <h3>Фисташки органические</h3>
+      <p>950 руб / кг</p>
+      <button onclick="addToCart('Фисташки органические')">В корзину</button>
+    </div>
   </div>
 
   <div class="cart" id="cart">
@@ -235,71 +332,5 @@
       cartItems.forEach((item, index) => {
         const li = document.createElement('li');
         li.textContent = item;
-        const btn = document.createElement('button');
-        btn.innerHTML = '✖';
-        btn.onclick = () => removeFromCart(index);
-        li.appendChild(btn);
-        list.appendChild(li);
-      });
-    }
-  }
+        const btn
 
-  function addToCart(productName) {
-    cartItems.push(productName);
-    saveCart();
-    updateCartDisplay();
-  }
-
-  function removeFromCart(index) {
-    cartItems.splice(index, 1);
-    saveCart();
-    updateCartDisplay();
-  }
-
-  function prepareOrder() {
-    if (cartItems.length === 0) {
-      alert("Корзина пуста!");
-      return false;
-    }
-    document.getElementById("order-products").value = cartItems.join(", ");
-    localStorage.removeItem('cartItems');
-    cartItems = [];
-    updateCartDisplay();
-    return true;
-  }
-
-  function filterProducts() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    const products = document.querySelectorAll('.product');
-    products.forEach(product => {
-      const name = product.querySelector('h3').textContent.toLowerCase();
-      if (name.includes(input)) {
-        product.style.display = '';
-      } else {
-        product.style.display = 'none';
-      }
-    });
-  }
-
-  function filterCategory(category) {
-    const buttons = document.querySelectorAll('.category-buttons button');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-
-    const products = document.querySelectorAll('.product');
-    products.forEach(product => {
-      if (category === 'all' || product.dataset.category === category) {
-        product.style.display = '';
-      } else {
-        product.style.display = 'none';
-      }
-    });
-    // Сбросить поиск при смене категории
-    document.getElementById('searchInput').value = '';
-  }
-
-  window.onload = loadCart;
-</script>
-
-</body>
-</html>
